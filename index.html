@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IncluiBem</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="util" role="group" aria-label="Recursos de acessibilidade"><span>Acessibilidade:</span>
+<button class="tb" id="tMenos" type="button" aria-label="Diminuir texto">A−</button>
+<button class="tb" id="tMais" type="button" aria-label="Aumentar texto">A+</button>
+<button class="tb" id="tCont" type="button" aria-pressed="false">Modo escuro</button>
+<button class="tb" id="tAlert" type="button" aria-pressed="false">Alerta visual</button>
+<button class="tb" id="tVoz" type="button" aria-pressed="false">Ouvir página</button>
+</div>
+<div class="bar">
+<a class="logo" href="#inicio"><img src="logo.png" width="48" height="48" alt="" style="display:block">IncluiBem</a>
+<nav aria-label="Principal">
+<a href="#inicio">Início</a>
+<a href="#unidades">Unidades</a>
+<a href="#agendar">Agendar</a>
+<a href="#consultas">Minhas consultas</a>
+<a href="#cadastro">Meu cadastro</a>
+</nav>
+
+</div>
+<div class="sub"><span>Sobre o projeto:</span>
+<nav aria-label="Sobre o projeto">
+<a href="#problema">Problema</a>
+<a href="#solucao">Solução</a>
+<a href="#funcionalidades">Funcionalidades</a>
+<a href="#acessibilidade">Acessibilidade</a>
+<a href="#como-funciona">Como funciona</a>
+</nav></div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<section data-page="inicio">
+<div class="hero"><div class="w">
+<div class="stack" style="flex:1 1 460px;gap:24px">
+<div><span class="pill">Demonstração · dados fictícios</span></div>
+<span class="k">Saúde sem barreiras</span>
+<h1 class="h1">Cuidar da saúde começa por um agendamento acessível.</h1>
+<p class="p" style="font-size:20px">O IncluiBem permite marcar consultas médicas de forma simples e digital e ainda solicitar transporte até a unidade de saúde, com mais autonomia para PCDs, idosos e pessoas com dificuldade de locomoção.</p>
+<div class="row" style="margin-top:8px"><a class="b" href="#agendar">Agendar consulta</a><a class="b b2" href="#cadastro">Fazer meu cadastro</a></div>
+</div>
+<div style="flex:1 1 340px;display:flex;justify-content:center">
+<div class="mock" style="width:100%;max-width:420px;box-sizing:border-box">
+<span class="k">Próxima consulta</span>
+<p class="t" style="font-size:26px" id="nxEsp">Nenhuma consulta agendada</p>
+<p class="p" id="nxWhen">Agende em poucos passos.</p>
+<div id="nxPills" style="display:flex;gap:10px;flex-wrap:wrap"></div>
+</div>
+</div>
+</div></div>
+<div class="w"><div class="ban" id="banIn" hidden></div></div>
+<div class="sec"><div class="w">
+<div class="stack"><span class="k">Explore o projeto</span><h2 class="h2">Cada tópico em uma aba.</h2></div>
+<div class="g">
+<a class="c" href="#problema" style="text-decoration:none"><h3 class="t" style="color:var(--ink)">O problema</h3><p class="p">Por que agendar consultas ainda é difícil para muita gente.</p></a>
+<a class="c" href="#solucao" style="text-decoration:none"><h3 class="t" style="color:var(--ink)">A solução</h3><p class="p">Agendamento digital e transporte até a unidade.</p></a>
+<a class="c" href="#funcionalidades" style="text-decoration:none"><h3 class="t" style="color:var(--ink)">Funcionalidades</h3><p class="p">O que o serviço inclui.</p></a>
+<a class="c" href="#acessibilidade" style="text-decoration:none"><h3 class="t" style="color:var(--ink)">Acessibilidade</h3><p class="p">Recursos para pessoas com deficiência.</p></a>
+</div>
+</div></div>
+</section>
+
+<section data-page="problema" class="sec" hidden><div class="w">
+<div class="stack"><span class="k">O problema</span><h2 class="h2">Marcar uma consulta ainda é um obstáculo para muita gente.</h2>
+<p class="p">Muitas pessoas enfrentam dificuldades para agendar consultas presencialmente, seja pela falta de acessibilidade, pela mobilidade reduzida ou pela ausência de meios adequados de locomoção. Essa situação afeta principalmente pessoas com deficiência (PCDs), idosos e pessoas com dificuldades de deslocamento.</p></div>
+<div class="g">
+<div class="c"><h3 class="t">Pessoas com deficiência</h3><p class="p">Locais e canais de agendamento sem acessibilidade tornam o primeiro passo do cuidado mais difícil.</p></div>
+<div class="c"><h3 class="t">Idosos</h3><p class="p">Ir até a unidade apenas para marcar uma consulta pode ser cansativo e, muitas vezes, limitado.</p></div>
+<div class="c"><h3 class="t">Mobilidade reduzida</h3><p class="p">Sem transporte adequado, o acesso aos serviços de saúde fica mais complicado.</p></div>
+</div>
+<div class="row"><a class="b" href="#solucao">Próximo: a solução</a></div>
+</div></section>
+
+<section data-page="solucao" class="sec" hidden><div class="w">
+<div class="stack"><span class="k">A solução</span><h2 class="h2">Um aplicativo que leva o atendimento até a pessoa.</h2>
+<p class="p">O objetivo é desenvolver um aplicativo que facilite e torne mais acessível o agendamento de consultas médicas, permitindo que o processo seja feito de forma simples e digital, sem a necessidade de comparecer presencialmente aos locais de atendimento.</p></div>
+<div class="g" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+<div class="c"><h3 class="t">Agendamento digital</h3><p class="p">Marque, remarque ou cancele consultas pelo site ou aplicativo, no seu ritmo.</p></div>
+<div class="c"><h3 class="t">Solicitação de transporte</h3><p class="p">Peça o deslocamento até a unidade de saúde e ganhe mais autonomia, praticidade e inclusão.</p></div>
+</div>
+<div class="row"><a class="b b2" href="#problema">Voltar</a><a class="b" href="#funcionalidades">Próximo: funcionalidades</a></div>
+</div></section>
+
+<section data-page="funcionalidades" class="sec" hidden><div class="w">
+<div class="stack"><span class="k">O que o serviço inclui</span><h2 class="h2">Funcionalidades pensadas para incluir.</h2></div>
+<div class="g">
+<div class="c"><span class="n">01</span><h3 class="t">Cadastro de usuários</h3><p class="p">Registro de informações pessoais, necessidades de acessibilidade e dados necessários para o atendimento.</p></div>
+<div class="c"><span class="n">02</span><h3 class="t">Lembretes de consultas</h3><p class="p">Notificações com data, horário e local da consulta, evitando esquecimentos e atrasos.</p></div>
+<div class="c"><span class="n">03</span><h3 class="t">Acompanhamento de agendamentos</h3><p class="p">Visualize as consultas marcadas e acompanhe as solicitações de transporte.</p></div>
+<div class="c"><span class="n">04</span><h3 class="t">Informações sobre unidades de saúde</h3><p class="p">Acesso a locais de atendimento, especialidades médicas e horários disponíveis.</p></div>
+<div class="c"><span class="n">05</span><h3 class="t">Acessibilidade para PCDs</h3><p class="p">Recursos adaptados que facilitam o uso por pessoas com deficiência visual, auditiva, motora ou outras necessidades específicas.</p></div>
+<div class="c"><span class="n">06</span><h3 class="t">Agendamento de consultas online</h3><p class="p">Marque, remarque ou cancele consultas médicas pelo site, sem comparecer presencialmente à unidade.</p></div>
+</div>
+<div class="row"><a class="b b2" href="#solucao">Voltar</a><a class="b" href="#acessibilidade">Próximo: acessibilidade</a></div>
+</div></section>
+
+<section data-page="acessibilidade" hidden>
+<div class="band sec"><div class="w">
+<div class="stack"><span class="k">Acessibilidade para PCDs</span><h2 class="h2">Um serviço que se adapta a cada pessoa.</h2></div>
+<div class="g">
+<div class="d"><h3 class="t">Deficiência visual</h3><p class="p">Recursos adaptados para facilitar a leitura e a navegação.</p></div>
+<div class="d"><h3 class="t">Deficiência auditiva</h3><p class="p">Tradutor de Libras do governo federal (VLibras, precisa de internet), alertas visuais e vibração nos lembretes, pedido de intérprete de Libras no agendamento e contato por mensagem de texto.</p></div>
+<div class="d"><h3 class="t">Deficiência motora</h3><p class="p">Recursos adaptados para uso com facilidade, sem depender de deslocamento.</p></div>
+</div>
+<div class="row"><a class="b" style="background:#fff;color:#0B5C63;border-color:#fff" href="#como-funciona">Próximo: como funciona</a></div>
+</div></div>
+</section>
+
+<section data-page="como-funciona" class="sec" hidden><div class="w">
+<div class="stack"><span class="k">Como funciona</span><h2 class="h2">Da escolha da consulta até a chegada à unidade.</h2></div>
+<div class="g" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+<div class="c"><span class="n">1</span><h3 class="t">Cadastre-se</h3><p class="p">Informe seus dados e suas necessidades de acessibilidade.</p></div>
+<div class="c"><span class="n">2</span><h3 class="t">Agende</h3><p class="p">Escolha a unidade, a especialidade e o horário disponível.</p></div>
+<div class="c"><span class="n">3</span><h3 class="t">Solicite transporte</h3><p class="p">Peça o deslocamento até a unidade e acompanhe a solicitação.</p></div>
+<div class="c"><span class="n">4</span><h3 class="t">Receba lembretes</h3><p class="p">Saiba a data, o horário e o local da consulta, sem esquecimentos.</p></div>
+</div>
+<div class="row"><a class="b" href="#sobre">Próximo: sobre o projeto</a></div>
+</div></section>
+
+<section data-page="unidades" class="sec" hidden><div class="w">
+<div class="stack"><span class="k">Informações sobre unidades de saúde</span><h2 class="h2">Onde ser atendido.</h2>
+<p class="p">Hospitais públicos e UBS de exemplo, só para a demonstração. Em emergência, ligue 192 (SAMU).</p></div>
+<div class="form" style="margin-top:24px;flex-direction:row;flex-wrap:wrap;gap:16px"><div class="f"><label for="fTipo">Tipo de unidade</label><select id="fTipo" style="max-width:260px"><option value="">Hospitais públicos e UBS</option><option>Hospital público</option><option>UBS</option></select></div><div class="f"><label for="fEsp">Especialidade</label><select id="fEsp" style="max-width:260px"></select></div></div>
+<div class="g" id="listaUnidades"></div>
+</div></section>
+
+<section data-page="agendar" class="sec" hidden><div class="w">
+<div class="stack"><span class="k">Agendamento online</span><h2 class="h2" id="agTit">Agendar consulta</h2>
+<p class="p">Escolha a unidade, a data e o horário. Se precisar, peça transporte até a unidade.</p></div>
+<form id="fAg" class="form" novalidate>
+<div class="f"><label for="aUn">Unidade de saúde</label><select id="aUn"></select></div>
+<div class="f"><label for="aEsp">Especialidade</label><select id="aEsp"></select></div>
+<div class="f"><label for="aData">Data</label><input type="date" id="aData"></div>
+<div class="f"><label for="aHora">Horário</label><select id="aHora"></select><p class="p" id="aInfo"></p></div>
+<label class="chk"><input type="checkbox" id="aTr"> Preciso de transporte até a unidade</label>
+<label class="chk"><input type="checkbox" id="aLib"> Preciso de intérprete de Libras na consulta</label>
+<div class="f" id="aOrigW" hidden><label for="aOrig">Endereço de partida</label><input type="text" id="aOrig" autocomplete="street-address"><p class="p">O transporte busca você 1 hora antes da consulta.</p></div>
+<p class="p" id="aMsg" role="alert" style="color:var(--ink);font-weight:700"></p>
+<div class="row" style="margin-top:0"><button class="b" id="agBtn" type="submit" style="font-family:inherit;cursor:pointer">Confirmar agendamento</button><button class="b b2" id="agCan" type="button" hidden style="font-family:inherit;cursor:pointer">Cancelar alteração</button></div>
+</form>
+</div></section>
+
+<section data-page="consultas" class="sec" hidden><div class="w">
+<div class="stack"><span class="k">Acompanhamento de agendamentos</span><h2 class="h2">Minhas consultas.</h2>
+<p class="p">Veja suas consultas, remarque, cancele e acompanhe o transporte.</p></div>
+<div class="ban" id="banCo" hidden></div>
+<div class="row" style="margin-top:24px;align-items:center"><button class="b b2" id="btnNotif" type="button" style="font-family:inherit;cursor:pointer">Ativar notificações</button><span class="p" id="notifSt"></span></div>
+<div class="g" id="listaCons" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))"></div>
+</div></section>
+
+<section data-page="cadastro" class="sec" hidden><div class="w">
+<div class="stack"><span class="k">Cadastro de usuários</span><h2 class="h2">Meu cadastro.</h2>
+<p class="p" id="cOla">Informe seus dados e suas necessidades de acessibilidade. Este protótipo guarda tudo apenas neste navegador.</p></div>
+<form id="fCad" class="form" novalidate>
+<div class="f"><label for="cNome">Nome completo</label><input type="text" id="cNome" autocomplete="name"></div>
+<div class="f"><label for="cTel">Telefone</label><input type="tel" id="cTel" autocomplete="tel"></div>
+<div class="f"><label for="cMail">E-mail</label><input type="email" id="cMail" autocomplete="email"></div>
+<div class="f"><label for="cCont">Como prefere ser contatado?</label><select id="cCont"><option value="">Sem preferência</option><option>Mensagem de texto (WhatsApp ou SMS)</option><option>E-mail</option><option>Ligação</option></select></div>
+<div class="f"><label for="cEnd">Endereço (usado no transporte)</label><input type="text" id="cEnd" autocomplete="street-address"></div>
+<fieldset><legend>Necessidades de acessibilidade</legend>
+<label class="chk"><input type="checkbox" name="nec" value="Deficiência visual"> Deficiência visual</label>
+<label class="chk"><input type="checkbox" name="nec" value="Deficiência auditiva"> Deficiência auditiva</label>
+<label class="chk"><input type="checkbox" name="nec" value="Usa Libras"> Uso Libras (Língua Brasileira de Sinais)</label>
+<label class="chk"><input type="checkbox" name="nec" value="Deficiência motora"> Deficiência motora</label>
+<label class="chk"><input type="checkbox" name="nec" value="Mobilidade reduzida"> Mobilidade reduzida</label>
+<label class="chk"><input type="checkbox" name="nec" value="Idoso"> Idoso</label>
+<label class="chk"><input type="checkbox" name="nec" value="Outra"> Outra necessidade</label>
+</fieldset>
+<p class="p" id="cMsg" role="status" style="color:var(--ink);font-weight:700"></p>
+<div class="row" style="margin-top:0"><button class="b" type="submit" style="font-family:inherit;cursor:pointer">Salvar cadastro</button><button class="b b2" id="cApagar" type="button" style="font-family:inherit;cursor:pointer">Apagar meus dados</button></div>
+</form>
+</div></section>
+
+</main>
+
+<footer><div class="w">
+<div><span style="font-size:24px;font-weight:700;color:#fff">IncluiBem</span><p>Agendamento de consultas acessível, com transporte para quem precisa.</p></div>
+<span>Turma  · [OPL 81]</span>
+</div></footer>
+
+<div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="script.js"></script>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>try{new window.VLibras.Widget("https://vlibras.gov.br/app")}catch(e){}</script>
+</body>
+</html>
